@@ -1,0 +1,50 @@
+{
+  "name": "new-ui-theme",
+  "displayName": "New UI Theme",
+  "description": "Dois temas escuros com cores oficiais Radix, hierarquia discreta e sintaxe expressiva.",
+  "version": "0.1.15",
+  "publisher": "new-ui",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.96.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "dark",
+    "radix",
+    "vibrant"
+  ],
+  "scripts": {
+    "build": "tsc && node dist/generate.js",
+    "generate": "npm run build",
+    "validate": "tsc && node dist/validate.js",
+    "check": "npm run build && npm run validate && npm run validate:syntax",
+    "watch": "tsc --watch --preserveWatchOutput",
+    "watch:themes": "node --watch dist/generate.js",
+    "package": "npm run check && npx --yes @vscode/vsce package --no-dependencies --allow-missing-repository",
+    "validate:syntax": "tsc && node dist/validate-syntax.js"
+  },
+  "contributes": {
+    "themes": [
+      {
+        "label": "New UI Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/new-ui-dark-color-theme.json"
+      },
+      {
+        "label": "New UI Dark Vibrant",
+        "uiTheme": "vs-dark",
+        "path": "./themes/new-ui-dark-vibrant-color-theme.json"
+      }
+    ]
+  },
+  "devDependencies": {
+    "@radix-ui/colors": "3.0.0",
+    "@types/node": "^22.0.0",
+    "typescript": "^5.7.0",
+    "vscode-oniguruma": "^2.0.1",
+    "vscode-textmate": "^9.2.0"
+  }
+}

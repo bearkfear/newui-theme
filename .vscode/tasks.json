@@ -1,0 +1,43 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build themes",
+      "type": "npm",
+      "script": "build",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": [
+        "$tsc"
+      ]
+    },
+    {
+      "label": "watch compiler",
+      "type": "npm",
+      "script": "watch",
+      "isBackground": true,
+      "problemMatcher": [
+        "$tsc-watch"
+      ]
+    },
+    {
+      "label": "watch theme generator",
+      "type": "npm",
+      "script": "watch:themes",
+      "isBackground": true,
+      "problemMatcher": []
+    },
+    {
+      "label": "watch themes",
+      "dependsOn": [
+        "build themes",
+        "watch compiler",
+        "watch theme generator"
+      ],
+      "dependsOrder": "sequence",
+      "problemMatcher": []
+    }
+  ]
+}

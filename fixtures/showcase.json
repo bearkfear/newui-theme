@@ -1,0 +1,13 @@
+{
+  "name": "New UI Theme",
+  "active": true,
+  "count": 42,
+  "fallback": null,
+  "variants": [
+    "Dark",
+    "Vibrant"
+  ],
+  "editor": {
+    "semanticHighlighting": true
+  }
+}

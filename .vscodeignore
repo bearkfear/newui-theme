@@ -1,0 +1,9 @@
+.vscode/**
+src/**
+dist/**
+node_modules/**
+fixtures/**
+validation/**
+tsconfig.json
+package-lock.json
+.gitignore

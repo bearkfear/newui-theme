@@ -1,0 +1,10 @@
+/* Quiet surfaces, deliberate accents. */
+@import url("./base.css");
+:root { --spacing: 12px; }
+.card:hover, #profile > h2 {
+  display: grid;
+  gap: var(--spacing);
+  opacity: 0.95;
+  font-family: "Inter", sans-serif;
+}
+@media (min-width: 48rem) { .card { grid-template-columns: 1fr 2fr; } }
