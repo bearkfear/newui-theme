@@ -1,4 +1,33 @@
+# Dependências e artefatos gerados
 node_modules/
 dist/
 *.vsix
+coverage/
+*.tsbuildinfo
+
+# Configuração local e credenciais
+.env
+.env.*
+!.env.example
+.npmrc
+.aws/
+.codex/
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Compartilhar apenas as tarefas e o debugger do projeto
+.vscode/*
+!.vscode/launch.json
+!.vscode/tasks.json
+.idea/
+*.code-workspace
+
+# Logs e arquivos temporários
+*.log
+*.tmp
+*.swp
+*~
 .DS_Store
+Thumbs.db
